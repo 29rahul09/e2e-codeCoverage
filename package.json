@@ -1,0 +1,47 @@
+{
+    "name": "cypress-e2e-coverage",
+    "version": "1.0.0",
+    "description": "Cypress end-to-end testing with code coverage",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx cypress open",
+        "test:headless": "npx cypress run",
+        "coverage": "npx nyc report --reporter=html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/29rahul09/e2e-codeCoverage"
+    },
+    "keywords": [
+        "istanbul",
+        "cypress",
+        "code-coverage"
+    ],
+    "author": "rahul",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.26.0",
+        "@cypress/code-coverage": "^3.13.9",
+        "@cypress/webpack-preprocessor": "^5.0.0",
+        "babel-loader": "^8.2.5",
+        "babel-plugin-istanbul": "^7.0.0",
+        "babel-preset-env": "^0.0.0",
+        "cypress": "^13.17.0",
+        "nyc": "^17.1.0",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.0"
+    },
+    "nyc": {
+        "all": true,
+        "reporter": [
+            "text",
+            "html",
+            "lcov"
+        ],
+        "check-coverage": true,
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+    }
+}
